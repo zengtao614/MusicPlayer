@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.musicplayer.MusicPlayActivity">
+
+    <ImageView
+        android:id="@+id/album_view"
+        android:layout_width="match_parent"
+        android:background="@drawable/head"
+        android:layout_height="400dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true" />
+    <android.support.v7.widget.AppCompatSeekBar
+        android:id="@+id/music_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/album_view"/>
+    <TextView
+        android:id="@+id/music_starttime"
+        android:text="00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/music_seekbar"
+        android:layout_alignStart="@+id/music_seekbar"/>
+    <TextView
+        android:id="@+id/music_endtime"
+        android:text="00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/music_seekbar"
+        android:layout_alignEnd="@+id/music_seekbar"/>
+    <TextView
+        android:id="@+id/music_name"
+        android:text="歌名"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/music_seekbar"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/singer_name"
+        android:text="歌手名"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/music_name"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/bt_play"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@mipmap/ic_pause_circle_outline_black_48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:id="@+id/bt_previous"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@mipmap/ic_skip_previous_black_48dp"
+        android:layout_toLeftOf="@+id/bt_play"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+    <Button
+        android:id="@+id/bt_next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@mipmap/ic_skip_next_black_48dp"
+        android:layout_toRightOf="@+id/bt_play"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+</RelativeLayout>

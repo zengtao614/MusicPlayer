@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#F5F5F5"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_musicname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/iv_album"
+        android:layout_alignTop="@+id/iv_album"
+        android:text="歌名"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_singer"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/iv_album"
+        android:layout_alignBottom="@+id/iv_album"
+        android:text="歌手名"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/iv_album"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/head"
+        android:layout_margin="5dp"/>
+    <Button
+        android:id="@+id/bt_np"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/ic_skip_next_black_48dp"
+        android:layout_alignParentEnd="true"/>
+    <Button
+        android:id="@+id/bt_play"
+        android:onClick="getAlbum"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/bt_np"
+        android:background="@mipmap/ic_pause_circle_outline_black_48dp"/>
+    <Button
+        android:id="@+id/bt_pp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/bt_play"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/ic_skip_previous_black_48dp"/>
+    </RelativeLayout>
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="100"
+        android:progress="20" />
+</LinearLayout>
+
